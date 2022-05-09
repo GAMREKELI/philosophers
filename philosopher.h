@@ -17,6 +17,8 @@ typedef struct p_philo
     t_mutex         *right_fork;
     int             flag;
     long int        nb_eat;
+    int             finish;
+    int             philosopher;
 
     struct p_data   *data;
 
@@ -37,6 +39,7 @@ typedef struct  p_data
     t_mutex         time_eat;
     t_mutex         finish;
     t_mutex         write_mutex;
+    int             stop;
 
 }               t_data;
 
