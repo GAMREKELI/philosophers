@@ -40,6 +40,9 @@ typedef struct  p_data
     t_mutex         finish;
     t_mutex         write_mutex;
     int             stop;
+    int             flag;
+    int             code_error;
+    
 
 }               t_data;
 
@@ -47,9 +50,16 @@ typedef struct p_p
 {
     t_data  data;
     t_philo *ph;
+    int     num_argc;
+    int     num_philo;
+    int     time_sleep;
+    int     time_eat;
+    int     time_dead;
+
 }               t_p;
 
 
-int	ft_atoi(const char *str);
-
+int	    ft_atoi(const char *str);
+int	    parse(int ac, char **av, t_p *philo);
+void    error_message(void);
 #endif
