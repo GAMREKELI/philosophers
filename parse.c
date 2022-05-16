@@ -39,6 +39,5 @@ int	parse(int ac, char **av, t_p *philo)
 		if (ft_valid_argv(av[i], philo) == 0)
 			return (0);
 	}
-	printf("\n\n%d\n\n", philo->num_argc);
 	return (1);
 }
